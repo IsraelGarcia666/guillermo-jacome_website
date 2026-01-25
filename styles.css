@@ -1,0 +1,743 @@
+/* =============================
+   This styles.css is for GALLERY ONLY
+   ============================= */
+
+/* =============================
+   1) Global Reset & Base
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Stack Sans Notch", sans-serif;
+  color: #f8edd8;
+  background-color: #090808; /* fallback */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fluid container */
+main,
+.container {
+  width: min(900px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* =============================
+   2) Backgrounds (shared + per page)
+   Mobile-first: attachment scroll; Desktop: fixed
+   ============================= */
+body,
+body.home,
+body.about,
+body.gallery,
+body.contact {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll; /* mobile-first */
+}
+
+/* Page-specific images */
+body {
+  background-image: url("puerta-verde.jpg");
+}
+body.home {
+  background-image: url("puerta-verde.jpg");
+}
+body.about {
+  background-image: url("flame-1363095_Logo.png");
+}
+body.gallery {
+  background-image: url("israel-palacio-unsplash_Logo.png");
+}
+body.contact {
+  background-image: url("Guille-concert2_Logo.png");
+}
+
+/* =============================
+   3) Typography
+   ============================= */
+h1,
+h2,
+h3,
+h5,
+h6,
+nav a {
+  color: #f4f4f1;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 4.8vw, 3rem);
+}
+h3 {
+  font-size: clamp(1.4rem, 4.2vw, 2rem);
+}
+
+h1 {
+  background-color: #000206;
+  border: 1px solid #000305;
+  padding: 24px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+h3 {
+  background-color: #000206;
+  border: 1px solid #000305;
+  padding: 10px 20px;
+  margin: 24px auto 20px;
+  width: fit-content;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+p {
+  font-size: clamp(0.98rem, 2.4vw, 1.06rem);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* =============================
+   4) Navigation
+   ============================= */
+nav {
+  background-color: rgba(0, 2, 6, 0.75);
+  border: 1px solid #000305;
+  padding: 5px;
+  margin: 0 auto 5px;
+  width: fit-content;
+  border-radius: 15px;
+  opacity: 0.7;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+nav a:link {
+  color: #f5c812;
+  text-decoration: none;
+}
+nav a:visited {
+  color: #33fa01;
+}
+nav a:hover {
+  color: #1708f0;
+  text-decoration: underline;
+}
+nav a:active {
+  color: #ff0000;
+}
+
+/* =============================
+   5) Error fallback (noscript)
+   ============================= */
+#error-fallback-message {
+  display: none;
+  color: red;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid red;
+  background-color: black;
+}
+
+/* =============================
+   6) Gallery Layout — FINAL
+   ============================= */
+
+/* Widen the content only on the Gallery page */
+body.gallery main,
+body.gallery .container {
+  width: min(1200px, 100% - 2rem);
+}
+
+/* Step wrapper: force vertical stacking of sections */
+.demo-step1 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 22px;
+  padding: 12px 0 20px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Subtitle styling inside demo-step1 */
+.demo-step1 .subtitle {
+  display: inline-block;
+  margin: 10px auto 8px;
+  padding: 8px 16px;
+  border-radius: 15px;
+  background: linear-gradient(180deg, rgba(0, 2, 6, 0.85), rgba(0, 2, 6, 0.7));
+  border: 1px solid #000305;
+  color: #fdd006;
+}
+
+/* Base "card" look for artwork + float-card */
+.demo-step1 figure.artwork,
+.demo-step1 figure.float-card {
+  text-align: center;
+  margin: 0;
+  justify-self: center;
+  background: rgba(0, 2, 6, 0.55);
+  border: 1px solid #000305;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+  width: 280px;
+  max-width: 280px;
+}
+
+.demo-step1 figure.artwork img,
+.demo-step1 figure.float-card img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  border-radius: 12px;
+  border: 2px solid #173213;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.demo-step1 figure.artwork figcaption,
+.demo-step1 figure.float-card figcaption {
+  margin-top: 8px;
+  color: #e9ecef;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Hover zoom */
+.demo-step1 .hover-zoom img {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    filter 220ms ease;
+  transform-origin: center center;
+}
+
+.demo-step1 .hover-zoom:hover img {
+  transform: scale(1.5);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Lane row(s) ---------- */
+.demo-step1 .lane-3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Make the "middle row" (lane-3 artworks) larger and show full image */
+.demo-step1 .lane-3 figure.artwork {
+  width: 300px;
+  max-width: 300px;
+}
+.demo-step1 .lane-3 figure.artwork img {
+  height: 210px;
+  object-fit: contain;
+  background: #000;
+}
+
+/* =============================
+   6A) Absolute positioning demo (2 featured cards)
+   ============================= */
+.absolute-gallery {
+  position: relative; /* containing block */
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 18px auto 12px;
+  padding: 0 12px;
+
+  /* Reserve space so the scroll strip sits BELOW */
+  height: 650px;
+}
+
+/* Figures are absolute + centered by default */
+.absolute-gallery .artwork--absolute {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  z-index: 2;
+}
+
+/* Stack the 2 featured cards */
+.absolute-gallery .artwork--absolute:nth-of-type(1) {
+  top: 0;
+}
+.absolute-gallery .artwork--absolute:nth-of-type(2) {
+  top: 350px;
+}
+
+/* Featured images (same sizing as cards) */
+.absolute-gallery .artwork--absolute img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+/* Optional: 2nd featured card horizontal offset */
+.absolute-gallery > figure.artwork--absolute.abs-2 {
+  left: calc(50% + 10px);
+}
+
+/* =============================
+   6B) Float/Clear demo — displayed as a horizontal scroll strip
+   (keeps float/clear requirement via rubric demo section below)
+   ============================= */
+.float-demo {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px 24px;
+}
+
+/* Single horizontal strip */
+.float-demo .float-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 10px 6px 16px;
+  scroll-snap-type: x mandatory;
+}
+
+/* Each card is a scroll item */
+.float-demo .float-card {
+  float: none; /* visually disable floats for final layout */
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+  margin: 0;
+}
+
+/* Thumbnails */
+.float-demo .float-card img {
+  height: 140px;
+}
+
+/* Clearfix (kept, harmless) */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* =============================
+   7) Breakpoints
+   ============================= */
+@media (min-width: 720px) {
+  h1 {
+    padding: 40px;
+  }
+  h3 {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  body,
+  body.home,
+  body.about,
+  body.gallery,
+  body.contact {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 420px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .container,
+  main {
+    width: min(100% - 1rem, 900px);
+  }
+  nav {
+    gap: 0.5rem;
+  }
+}
+
+/* =========================================================
+   8) RUBRIC DEMOS
+   ========================================================= */
+.rubric-demos {
+  margin: 40px auto 20px;
+  max-width: 1100px;
+  padding: 0 12px;
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-box {
+  width: 140px;
+  height: 70px;
+  border: 2px solid #173213;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #f4f4f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* position demos */
+.demo-static {
+  position: static;
+}
+
+.demo-relative {
+  position: relative;
+  top: 6px; /* top demo */
+  left: 6px; /* left demo */
+}
+
+.demo-absolute {
+  position: relative;
+}
+
+.demo-absolute .demo-badge {
+  position: absolute; /* absolute demo */
+  top: 6px; /* top demo */
+  right: 6px; /* right demo */
+  z-index: 5; /* z-index demo */
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 25, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.demo-sticky {
+  position: sticky;
+  top: 10px;
+}
+
+/* Always visible, YES/NO*/
+.demo-fixed {
+  position: fixed;
+  bottom: 14px;
+  right: 14px;
+  z-index: 999;
+}
+
+/* float + clear demo */
+.demo-float-wrap {
+  width: 320px;
+  border: 2px solid #173213;
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.demo-float-img {
+  float: left; /* float demo */
+  width: 110px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.demo-clear {
+  clear: both;
+} /* clear demo */
+
+/* display demos */
+.d-inline {
+  display: inline;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.d-inlineblock {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.d-block {
+  display: block;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 6px;
+}
+
+/* ===============================
+   STICKY DEMO (reused gallery image)
+   =============================== */
+
+.sticky-image {
+  position: sticky;
+  top: 120px;
+  z-index: 20;
+}
+
+/* ===============================
+   Z-INDEX STACK DEMO
+   =============================== */
+
+.zstack-demo {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 10px 14px;
+}
+
+.zstack-inline {
+  text-align: center; /* center the whole group */
+}
+
+/* each card is inline-block + relative (z-index works) */
+.zcard {
+  display: inline-block; /* rubric-friendly + matches example */
+  position: relative; /* z-index needs positioned element */
+  width: 210px;
+  margin: 0 -55px; /* negative margin creates overlap */
+  vertical-align: middle;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+.zcard img {
+  width: 100%;
+  height: 140px;
+  display: block;
+  object-fit: cover;
+}
+
+.zcard figcaption {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+  color: #f4f4f1;
+}
+
+/* stacking order */
+.z1 {
+  z-index: 1;
+}
+.z2 {
+  z-index: 2;
+}
+.z3 {
+  z-index: 3;
+}
+.z4 {
+  z-index: 4;
+}
+.z5 {
+  z-index: 5;
+}
+.z6 {
+  z-index: 6;
+}
+
+/* optional: bring hovered card to front */
+.zcard:hover {
+  z-index: 999;
+}
+
+/* ===============================
+   FLOAT + CLEAR TEXT WRAP DEMO
+   =============================== */
+
+.float-text-demo {
+  max-width: 600px; /* controls box width */
+  margin: 40px auto; /* centers the box */
+  padding: 16px 18px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 3px solid hsl(120, 60%, 35%); /* HSL demo */
+  border-radius: 12px;
+}
+
+.float-img {
+  float: left; /* REQUIRED */
+  width: 350px; /* control image size */
+  margin-right: 12px; /* space between image and text */
+  margin-bottom: 8px;
+  border-radius: 10px;
+}
+
+.float-text-demo p {
+  line-height: 1.6;
+  font-size: 0.85rem;
+}
+
+/* Clear the float */
+.clear-demo {
+  clear: both; /* REQUIRED */
+}
+
+/* =============================
+   Bootstrap consistency helpers
+   ============================= */
+
+/* Bootstrap handle layout inside main (Gallery) */
+body.gallery main {
+  display: block;
+  align-items: unset;
+  justify-content: unset;
+}
+
+/* Gallery container already widened, keep it */
+body.gallery main.container {
+  width: min(1200px, 100% - 2rem);
+}
+/* Language buttons: keep subtle */
+#btnEN,
+#btnES {
+  border-color: rgba(233, 10, 10, 0.65);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fdd006;
+  transition: all 0.25s ease;
+}
+/* Using these classes on other pages,
+   define them here too (so Gallery matches) */
+.header-glass,
+.glass-box {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(0, 255, 120, 0.22);
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.55);
+  max-width: 610px; /* adjust freely: 800–1000px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===============================
+   MOVING LENS (YouTube)
+================================ */
+.moving-lens-box {
+  max-width: 700px; /* adjust if you want */
+}
+
+.moving-lens-header {
+  max-width: 700px; /* match .moving-lens-box */
+}
+
+.video-caption {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* optional: makes carousel arrows a bit more visible on dark bg */
+.moving-lens-section .carousel-control-prev-icon,
+.moving-lens-section .carousel-control-next-icon {
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.8));
+}
+
+/* =========================
+   Not Embeded Video Card
+========================== */
+
+/* =========================
+   FEATURED VIDEO CARD
+========================= */
+
+.featured-video-box {
+  max-width: 610px;
+  text-align: center;
+}
+
+.featured-video-title {
+  color: #07cf25; /* or your accent color */
+  font-weight: 600;
+}
+
+.featured-video-thumb {
+  position: relative;
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.featured-video-thumb img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.35s ease;
+}
+
+.featured-video-thumb:hover img {
+  transform: scale(1.03);
+}
+
+/* Play icon */
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-video-thumb:hover .play-overlay {
+  opacity: 1;
+}
+
+.featured-video-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* =========================
+   FOOTER (Gallery)
+========================== */
+body.gallery .footer-glass {
+  width: min(
+    610px,
+    calc(100% - 2rem)
+  ); /* 610 max, with side padding on small screens */
+  margin: 0 auto; /* centers */
+  padding: 16px 16px;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 255, 120, 0.25);
+  border-radius: 6px;
+
+  display: block; /* keep it block so margin auto works */
+}
+
+body.gallery .footer-text {
+  font-size: 0.85rem;
+  color: #04f520bc;
+  text-align: center;
+}

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="Israel Garcia Real" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G. Jacome website - Home</title>
+
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- =========================
+       BOOTSTRAP 5
+  ========================== -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS stylesheet link below. -->
+    <link rel="stylesheet" href="styles_backup.css" />
+
+    <!-- This style override only runs if JavaScript is disabled -->
+    <noscript>
+      <style>
+        #error-fallback-message {
+          display: block !important;
+        }
+      </style>
+    </noscript>
+    <!-- END OF ERROR CODE, IF -->
+  </head>
+
+  <body class="home">
+    <!-- Visibility, HIDDEN ELEMENT -->
+
+    <div id="error-fallback-message">
+      La cucaracha no puede navegar por el sitio web correctamente porque
+      JavaScript está deshabilitado en su navegador. Por favor, habilite
+      JavaScript para una mejor experiencia.
+      <br />
+      <a href="index.html">Go Home</a>
+    </div>
+
+    <header class="container py-3">
+      <div class="header-glass p-3 p-md-4 rounded-4 text-center">
+        <!-- Title 1 -->
+        <h1 class="title mb-2" data-i18n="title_main">
+          Guillermo Jacome - Official Website
+        </h1>
+
+        <!-- Nav + language buttons -->
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-3"
+        >
+          <nav class="d-flex flex-wrap justify-content-center gap-2 gap-md-3">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <span class="opacity-50">|</span>
+            <a href="about.html" data-i18n="nav_about">About me</a>
+            <span class="opacity-50">|</span>
+            <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+            <span class="opacity-50">|</span>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          </nav>
+
+          <div class="d-flex gap-2">
+            <button id="btnEN" class="btn btn-sm btn-outline-light">EN</button>
+            <button id="btnES" class="btn btn-sm btn-outline-light">ES</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container pb-4">
+      <section id="article" class="home-article">
+        <!-- Title 3 -->
+        <h3 class="home-subtitle text-center my-3" data-i18n="subtitle_fire">
+          Forging the Fire of Mexican Metal
+        </h3>
+
+        <!-- MAIN WRAPPER (Bootstrap grid) -->
+
+        <!-- Mobile portrait: STACKED (readable)
+     Mobile landscape + desktop: TWO COLUMNS -->
+        <div class="row g-3 g-md-4 align-items-start justify-content-center">
+          <!-- LEFT column: image -->
+          <aside class="col-12 col-sm-6 col-lg-6">
+            <div class="glass-box p-2 p-md-3 rounded-4 h-100">
+              <button class="fs-card w-100" aria-label="Open image full screen">
+                <img
+                  class="img-fluid rounded-4 w-100 home-main-image"
+                  src="guille1_logo.png"
+                  alt="Guillermo playing guitar"
+                />
+              </button>
+            </div>
+          </aside>
+
+          <!-- RIGHT column: text -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <article class="text-box glass-box p-3 p-md-4 rounded-4 h-100">
+              <p class="mb-0" data-i18n="home_paragraph">
+                Welcome to the official website of Guillermo Jacome...
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- End grid -->
+      </section>
+
+      <!-- =========================
+     EVENTS SECTION
+========================== -->
+      <section id="events" class="mt-5">
+        <h3
+          class="home-subtitle events-subtitle text-center my-3"
+          data-i18n="events_title"
+        >
+          Upcoming / Recent Events
+        </h3>
+
+        <div class="row g-3 g-md-4 justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="glass-box p-3 p-md-4 rounded-4">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+                <video
+                  class="w-100 h-100"
+                  controls
+                  preload="metadata"
+                  poster="Ozzy_tribute-poster.PNG"
+                >
+                  <source
+                    src="The_Jack-Ozzy_tribute_promo.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <p
+                class="mt-3 mb-0 text-center small opacity-75"
+                data-i18n="event_caption_1"
+              >
+                Ozzy's Tribute – Mexico City
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+     FOOTER
+========================== -->
+    <footer class="footer-glass mt-5 py-3 text-center">
+      <p class="footer-text mb-0">
+        © <span id="currentYear"></span>
+        <span data-i18n="footer_rights_text"
+          >Guillermo Jacome — All Rights Reserved</span
+        >
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".fs-card");
+
+        cards.forEach((card) => {
+          card.addEventListener("click", async (e) => {
+            e.preventDefault();
+            try {
+              if (!document.fullscreenElement) {
+                await card.requestFullscreen(); // enter fullscreen
+              } else {
+                await document.exitFullscreen(); // exit fullscreen
+              }
+            } catch (err) {
+              console.error("Fullscreen request failed:", err);
+            }
+          });
+        });
+
+        // Esc exits fullscreen
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && document.fullscreenElement) {
+            document.exitFullscreen();
+          }
+        });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const i18n = {
+          en: {
+            nav_home: "Home",
+            nav_about: "About me",
+            nav_gallery: "Gallery",
+            nav_contact: "Contact",
+            title_main: "Guillermo Jacome - Official Website",
+            subtitle_fire: "Forging the Fire of Mexican Metal",
+            home_paragraph: `Welcome to the official website of Guillermo Jacome, a Mexican metal artist whose work embodies the raw power and intricate beauty of metal craftsmanship. With a passion for transforming raw materials into stunning works of art, Jacome has established himself as a leading figure in the Mexican metal scene. Guitarist, composer, and teacher — a driving force in Latin American heavy metal since 1992. Renowned for his blazing solos, melodic precision, and commanding stage presence, Jacome has led audiences through unforgettable performances with Lvzbel, Raxas, and ex–Rata Blanca vocalists Mario Ian and Gabriel Marian. 🔥 Three decades of lead guitar mastery — where thunderous riffs meet the soul of lead guitar. 🔥 Explore his discography, discover upcoming shows, and dive into the story of a guitarist who continues to define the sound of Mexican rock.`,
+            events_title: "Upcoming / Recent Events",
+            event_caption_1: "Ozzy's Tribute – Mexico City",
+            footer_rights_text: "Guillermo Jacome — All Rights Reserved",
+          },
+
+          es: {
+            nav_home: "Inicio",
+            nav_about: "Acerca de mi",
+            nav_gallery: "Galería",
+            nav_contact: "Contacto",
+            title_main: "Guillermo Jacome - Sitio Web Oficial",
+            subtitle_fire: "Forjando el Fuego del Metal Mexicano",
+            home_paragraph: `Bienvenido al sitio web oficial de Guillermo Jacome, un artista del metal mexicano cuyo trabajo encarna el poder crudo y la complejidad artística del metal. Con una pasión por transformar materiales crudos en expresiones sonoras impactantes, Jacome se ha consolidado como una figura clave en la escena del metal mexicano. Guitarrista, compositor y maestro — una fuerza impulsora del heavy metal latinoamericano desde 1992. Reconocido por sus solos incendiarios, precisión melódica y una presencia escénica dominante, ha ofrecido actuaciones inolvidables junto a Lvzbel, Raxas y ex-vocalistas de Rata Blanca como Mario Ian y Gabriel Marian. 🔥 Tres décadas de maestría en la guitarra líder — donde los riffs atronadores se encuentran con el alma de la guitarra lider. 🔥 Explora su discografía, descubre próximos conciertos y adéntrate en la historia de un guitarrista que continúa definiendo el sonido del rock mexicano.`,
+            events_title: "Próximos / Recientes Eventos",
+            event_caption_1: "Homenaje a Ozzy – Ciudad de México",
+            footer_rights_text:
+              "Guillermo Jacome — Todos los derechos reservados",
+          },
+        };
+
+        function setLang(lang) {
+          document.documentElement.lang = lang;
+          localStorage.setItem("site_lang", lang);
+
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            if (i18n[lang] && i18n[lang][key]) {
+              el.textContent = i18n[lang][key];
+            }
+          });
+        }
+
+        document
+          .getElementById("btnEN")
+          ?.addEventListener("click", () => setLang("en"));
+        document
+          .getElementById("btnES")
+          ?.addEventListener("click", () => setLang("es"));
+
+        setLang(localStorage.getItem("site_lang") || "en");
+      });
+    </script>
+
+    <!-- =========================
+     AUTO CURRENT YEAR
+========================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const yearSpan = document.getElementById("currentYear");
+        if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =========================
+       META + FONTS
+  ========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="Israel Garcia Real" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>G. Jacome website - About</title>
+
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- =========================
+       BOOTSTRAP 5
+  ========================== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- =========================
+       YOUR CSS (keeps wallpaper + glass style)
+  ========================== -->
+    <link rel="stylesheet" href="styles_backup.css" />
+
+    <!-- This style override only runs if JavaScript is disabled -->
+    <noscript>
+      <style>
+        #error-fallback-message {
+          display: block !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body class="about">
+    <!-- =========================
+       VISIBILITY (NO-JS MESSAGE)
+  ========================== -->
+    <div id="error-fallback-message">
+      La cucaracha no puede navegar por el sitio web correctamente porque
+      JavaScript está deshabilitado en su navegador. Por favor, habilite
+      JavaScript para una mejor experiencia.
+      <br />
+      <a href="index.html">Go Home</a>
+    </div>
+
+    <!-- =========================
+       HEADER (Bootstrap wrapper + glass)
+  ========================== -->
+    <header class="container py-4">
+      <div class="header-glass p-3 p-md-4 rounded-4 text-center">
+        <!-- Page title -->
+        <h1 class="title mb-2" data-i18n="about_title">My Story</h1>
+
+        <!-- Nav + language buttons -->
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-3"
+        >
+          <nav class="d-flex flex-wrap justify-content-center gap-2 gap-md-3">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <span class="opacity-50">|</span>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <span class="opacity-50">|</span>
+            <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+            <span class="opacity-50">|</span>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          </nav>
+
+          <div class="d-flex gap-2">
+            <button id="btnEN" class="btn btn-sm btn-outline-light">EN</button>
+            <button id="btnES" class="btn btn-sm btn-outline-light">ES</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+    <main class="container pb-5">
+      <section id="article" class="about-article">
+        <!-- ===== Press Kit ===== -->
+        <div class="glass-box p-3 p-md-4 rounded-4 mb-4">
+          <h3 class="subtitle mb-3" data-i18n="about_presskit_title">
+            Press Kit
+          </h3>
+
+          <article class="text-content mb-0">
+            <p class="mb-0" data-i18n="about_presskit_text">
+              Mexican Heavy Metal Guitarist & Composer,
+
+              <br /><br />
+
+              He first gained prominence with Lvzbel (1998–2009), touring
+              extensively through the U.S., Mexico, Central, and South America.
+              From 2009 to 2012, he joined Raxas, recording the album Instinto
+              and expanding his creative range. Later, between 2013 and 2018, he
+              collaborated with Mario Ian (ex–Rata Blanca), serving as lead
+              guitarist on North American tours.
+
+              <br /><br />
+
+              Alongside his performance career, Jacome has contributed to music
+              education as a guitar instructor at the Elohim Corona Academy,
+              mentoring young musicians. Most recently, since 2023, he has
+              performed with Gabriel Marian (ex–Rata Blanca) and David Chirino
+              (La Ley), bringing his sound to audiences across Mexico.
+
+              <br /><br />
+
+              His discography includes En vivo y Desnudo (Vol. 1 & 2), Tiempo de
+              la Bestia (soundtrack for Guerrero callejero), Tributo a Judas
+              Priest & Tentaciones, with Lvzbel. Evangelio Nocturno (Remake),
+              with Evangelium, and Instinto with Raxas.
+
+              <br /><br />
+
+              Celebrated for his powerful riffs and melodic versatility,
+              Guillermo Jacome blends rock influences with heavy metal
+              intensity. His collaborations with leading figures of the Latin
+              American heavy metal movement and his dedication to teaching have
+              secured his legacy as performer and mentor.
+            </p>
+          </article>
+        </div>
+
+        <!-- ===== Career Highlights ===== -->
+        <div class="glass-box p-3 p-md-4 rounded-4 mb-4">
+          <h3 class="subtitle mb-3" data-i18n="about_career_title">
+            Career Highlights
+          </h3>
+
+          <!-- IMPORTANT: headings are OUTSIDE <ul> (fixes your validator error) -->
+          <ul class="mb-0" data-i18n="about_career_list">
+            <li>
+              Lvzbel (1998–2009): Jacome was a key guitarist for Lvzbel, one of
+              Mexico’s most iconic heavy metal bands, touring across the United
+              States, Mexico, Central, and South America. He contributed to
+              albums such as Tiempo de la Bestia and Tentaciones.
+            </li>
+
+            <li>
+              Raxas (2009–2012): Joined Raxas, where he recorded the album
+              Instinto.
+            </li>
+
+            <li>
+              Mario Ian (2013–2018): Invited by Mario Ian, former vocalist of
+              Rata Blanca, to play guitar during his North American tours. This
+              collaboration strengthened his reputation in the Latin American
+              metal scene.
+            </li>
+
+            <li>
+              Teaching Career: Served as a guitar instructor at the Academia
+              Elohim Corona, where he was recognized as a lead teacher of
+              electric guitar, demonstrating versatility and technical mastery.
+            </li>
+
+            <li>
+              Recent Work (2023–present): Teamed up with Gabriel Marian (ex–Rata
+              Blanca) and David Chirino (bassist of La Ley) to perform a series
+              of shows in Mexico, continuing his active role in the live music
+              circuit.
+            </li>
+          </ul>
+        </div>
+
+        <!-- ===== Discography ===== -->
+        <div class="glass-box p-3 p-md-4 rounded-4">
+          <h3 class="subtitle mb-3" data-i18n="about_discography_title">
+            Discography
+          </h3>
+
+          <h4 class="mb-2" data-i18n="about_discography_lvzbel">
+            Discography — Lvzbel
+          </h4>
+          <ul class="mb-4" data-i18n="about_discography_lvzbel_list">
+            <li>1999 — Vivo y Desnudo I (Live album)</li>
+            <li>1999 — Vivo y Desnudo II (Live album)</li>
+            <li>1999 — Vivo y Desnudo - El Video (video)</li>
+            <li>1999 — Lo Mejor de Luzbel (Warner Music)</li>
+            <li>2000 — Tiempo de la Bestia</li>
+            <li>2000 — Guerrero Callejero, Movie (Soundtrack)</li>
+            <li>2000 — 1985-1999: Pistas Musicales (Compilation)</li>
+            <li>2002 — En Vivo en Quito, Ecuador (Live album)</li>
+            <li>
+              2003 — Mirada Eléctrica (Tribute to Judas Priest in Spanish)
+            </li>
+            <li>2004 — Historial Negro, El Cielo. Disc I</li>
+            <li>2004 — Historial Negro, La Tierra. Disc II</li>
+            <li>2004 — Historial Negro, El Infierno. Disc III</li>
+            <li>2006 — Tentaciones</li>
+          </ul>
+
+          <h4 class="mb-2" data-i18n="about_discography_raxas">
+            Discography — Raxas
+          </h4>
+          <ul class="mb-4" data-i18n="about_discography_raxas_list">
+            <li>2011 — Instinto</li>
+          </ul>
+
+          <h4 class="mb-2" data-i18n="about_discography_evangelium">
+            Discography — Evangelium
+          </h4>
+          <ul class="mb-0" data-i18n="about_discography_evangelium_list">
+            <li>
+              2023 — Evangelio Nocturno (Remake of Lvzbel's Evangelio Nocturno)
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+     FOOTER
+========================== -->
+    <footer class="footer-glass mt-5 py-3 text-center">
+      <p class="footer-text mb-0">
+        © <span id="currentYear"></span>
+        <span data-i18n="footer_rights_text"
+          >Guillermo Jacome — All Rights Reserved</span
+        >
+      </p>
+    </footer>
+
+    <!-- =========================
+     TRANSLATION SCRIPT (ABOUT)
+========================== -->
+    <script>
+      // Store the original EN HTML for sections that contain <li> or <br>
+      const originalHTML = {};
+
+      // Capture original content once (EN as written in the HTML)
+      window.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          originalHTML[key] = el.innerHTML; // keep HTML (for <br>, <li>, etc.)
+        });
+      });
+
+      const translations = {
+        en: {
+          /* NAV */
+          nav_home: "Home",
+          nav_about: "About",
+          nav_gallery: "Gallery",
+          nav_contact: "Contact",
+
+          /* ABOUT */
+          about_title: "My Story",
+
+          // Keep Press Kit title in EN
+          about_presskit_title: "Press Kit",
+          about_presskit_text: `Mexican Heavy Metal Guitarist & Composer,<br><br>Guillermo Jacome (b. November 6, 1977),
+        stands out as one of Mexico’s most versatile and respected guitarists in the heavy metal scene.
+        Since the beginning of his career in 1992, he has explored hard rock, blues, and classic rock,
+        earning recognition across Latin America and beyond.
+        <br><br>
+        He first gained prominence with Lvzbel (1998–2009), touring extensively through the U.S., Mexico,
+        Central, and South America. From 2009 to 2012, he joined Raxas, recording the album Instinto and
+        expanding his creative range. Later, between 2013 and 2018, he collaborated with Mario Ian
+        (ex–Rata Blanca), serving as lead guitarist on North American tours.
+        <br><br>
+        Alongside his performance career, Jacome has contributed to music education as a guitar instructor
+        at the Elohim Corona Academy, mentoring young musicians. Most recently, since 2023, he has performed
+        with Gabriel Marian (ex–Rata Blanca) and David Chirino (La Ley), bringing his sound to audiences
+        across Mexico.
+        <br><br>
+        His discography includes En vivo y Desnudo (Vol. 1 & 2), Tiempo de la Bestia
+        (soundtrack for Guerrero callejero), Tributo a Judas Priest & Tentaciones, with Lvzbel.
+        Evangelio Nocturno (Remake), with Evangelium, and Instinto with Raxas.
+        <br><br>
+        Celebrated for his powerful riffs and melodic versatility, Guillermo Jacome blends rock
+        influences with heavy metal intensity. His collaborations with leading figures of the
+        Latin American heavy metal movement and his dedication to teaching have secured his legacy
+        as performer and mentor.`,
+
+          about_career_title: "Career Highlights",
+          about_career_list: null, // will fallback to originalHTML
+
+          about_discography_title: "Discography",
+          about_discography_lvzbel: "Discography — Lvzbel",
+          about_discography_lvzbel_list: null, // fallback
+          about_discography_raxas: "Discography — Raxas",
+          about_discography_raxas_list: null, // fallback
+          about_discography_evangelium: "Discography — Evangelium",
+          about_discography_evangelium_list: null, // fallback
+
+          footer_rights_text: "Guillermo Jacome — All Rights Reserved",
+        },
+
+        es: {
+          /* NAV */
+          nav_home: "Inicio",
+          nav_about: "Acerca de mi",
+          nav_gallery: "Galería",
+          nav_contact: "Contacto",
+
+          /* ABOUT */
+          about_title: "Mi historia",
+
+          // “Press Kit” can stay as-is (same in ES)
+          about_presskit_title: "Press Kit",
+
+          // Spanish Press Kit paragraph (keeps <br><br> like in HTML)
+          about_presskit_text: `Guitarrista y compositor del heavy metal mexicano,<br><br>Guillermo Jacome (n. 6 de noviembre de 1977),
+        destaca como uno de los guitarristas más versátiles y respetados de la escena del metal en México.
+        Desde el inicio de su carrera en 1992, ha explorado hard rock, blues y rock clásico, ganando
+        reconocimiento en Latinoamérica y más allá.
+        <br><br>
+        Alcanzó mayor proyección con Lvzbel (1998–2009), realizando giras extensas por Estados Unidos, México,
+        Centro y Sudamérica. De 2009 a 2012 se integró a Raxas, grabando el álbum <em>Instinto</em> y ampliando
+        su rango creativo. Más tarde, entre 2013 y 2018, colaboró con Mario Ian (ex–Rata Blanca), como guitarrista
+        líder en giras por Norteamérica.
+        <br><br>
+        Paralelamente a su carrera artística, Jacome ha contribuido a la educación musical como instructor de guitarra
+        en la Academia Elohim Corona, formando a jóvenes músicos. Más recientemente, desde 2023, ha realizado presentaciones
+        con Gabriel Marian (ex–Rata Blanca) y David Chirino (La Ley), llevando su sonido a diferentes audiencias en México.
+        <br><br>
+        Su discografía incluye <em>En vivo y Desnudo</em> (Vol. 1 y 2), <em>Tiempo de la Bestia</em> (soundtrack de Guerrero callejero),
+        <em>Tributo a Judas Priest</em> y <em>Tentaciones</em> con Lvzbel; <em>Evangelio Nocturno</em> (Remake) con Evangelium; e <em>Instinto</em> con Raxas.
+        <br><br>
+        Reconocido por sus riffs potentes y su versatilidad melódica, Guillermo Jacome fusiona influencias del rock con la intensidad del heavy metal.
+        Sus colaboraciones con figuras clave de el movimiento del metal latinoamericano y su dedicación a la enseñanza han consolidado su legado como intérprete y mentor.
+      `,
+
+          about_career_title: "Momentos destacados de la carrera",
+          about_career_list: `
+        <li>Lvzbel (1998–2009): Jacome fue guitarrista clave de Lvzbel, una de las bandas más icónicas del heavy metal mexicano, realizando giras por Estados Unidos, México, Centro y Sudamérica. Contribuyó en álbumes como <em>Tiempo de la Bestia</em> y <em>Tentaciones</em>.</li>
+        <li>Raxas (2009–2012): Se integró a Raxas, donde grabó el álbum <em>Instinto</em>.</li>
+        <li>Mario Ian (2013–2018): Invitado por Mario Ian, ex vocalista de Rata Blanca, para tocar guitarra en sus giras por Norteamérica, fortaleciendo su reputación en la escena del metal latinoamericano.</li>
+        <li>Carrera docente: Se desempeñó como instructor de guitarra en la Academia Elohim Corona, donde fue reconocido como profesor líder de guitarra eléctrica por su versatilidad y dominio técnico.</li>
+        <li>Trabajo reciente (2023–presente): Colabora con Gabriel Marian (ex–Rata Blanca) y David Chirino (La Ley), presentándose en una serie de conciertos en México y manteniendo una activa presencia en la escena en vivo.</li>
+      `,
+
+          about_discography_title: "Discografía",
+
+          about_discography_lvzbel: "Discografía — Lvzbel",
+          about_discography_lvzbel_list: `
+        <li>1999 — Vivo y Desnudo I (Álbum en vivo)</li>
+        <li>1999 — Vivo y Desnudo II (Álbum en vivo)</li>
+        <li>1999 — Vivo y Desnudo - El video (video)</li>
+        <li>1999 — Lo Mejor de Luzbel (Warner Music)</li>
+        <li>2000 — Tiempo de la Bestia</li>
+        <li>2000 — Guerrero Callejero (Soundtrack de la película)</li>
+        <li>2000 — 1985–1999: Pistas Musicales (Compilación)</li>
+        <li>2002 — En Vivo en Quito, Ecuador (Álbum en vivo)</li>
+        <li>2003 — Mirada Eléctrica (Tributo en español a Judas Priest)</li>
+        <li>2004 — Historial Negro, El Cielo. Disco I</li>
+        <li>2004 — Historial Negro, La Tierra. Disco II</li>
+        <li>2004 — Historial Negro, El Infierno. Disco III</li>
+        <li>2006 — Tentaciones</li>
+      `,
+
+          about_discography_raxas: "Discografía — Raxas",
+          about_discography_raxas_list: `
+        <li>2011 — Instinto</li>
+      `,
+
+          about_discography_evangelium: "Discografía — Evangelium",
+          about_discography_evangelium_list: `
+        <li>2023 — Evangelio Nocturno (Remake de Evangelio Nocturno de Lvzbel)</li>
+      `,
+          footer_rights_text:
+            "Guillermo Jacome — Todos los derechos reservados",
+        },
+      };
+
+      function setContent(el, value, fallbackKey) {
+        // If value is explicitly null/undefined, restore original HTML from the page
+        if (value === null || value === undefined) {
+          if (originalHTML[fallbackKey] !== undefined)
+            el.innerHTML = originalHTML[fallbackKey];
+          return;
+        }
+
+        // If it contains HTML tags, use innerHTML; otherwise plain text
+        const looksLikeHTML = /<[^>]+>/.test(value);
+        if (looksLikeHTML) el.innerHTML = value;
+        else el.textContent = value;
+      }
+
+      function applyTranslations(lang) {
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          const value = translations?.[lang]?.[key];
+
+          // If ES has a key but EN doesn’t, switching back must restore the original HTML
+          setContent(el, value, key);
+        });
+
+        // placeholders support (not used on About, but safe)
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+          const key = el.getAttribute("data-i18n-placeholder");
+          const value = translations?.[lang]?.[key];
+          if (value) el.setAttribute("placeholder", value);
+        });
+
+        document.documentElement.lang = lang;
+        localStorage.setItem("lang", lang);
+      }
+
+      document
+        .getElementById("btnEN")
+        ?.addEventListener("click", () => applyTranslations("en"));
+      document
+        .getElementById("btnES")
+        ?.addEventListener("click", () => applyTranslations("es"));
+
+      // Apply on load
+      const saved = localStorage.getItem("lang") || "en";
+      applyTranslations(saved);
+    </script>
+
+    <!-- =========================
+     AUTO CURRENT YEAR
+========================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const yearSpan = document.getElementById("currentYear");
+        if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8" />
+    <meta name="author" content="Israel Garcia Real">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G. Jacome website - Gallery</title>
+
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- =========================
+       BOOTSTRAP 5
+  ========================== -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS stylesheet link below. -->
+    <link rel="stylesheet" href="styles.css" />
+
+     <!-- This style override only runs if JavaScript is disabled -->
+    <noscript>
+        <style>
+            #error-fallback-message {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <!-- END OF ERROR CODE, IF -->
+  </head>
+  <body class="gallery">
+
+    <!-- Visibility, HIDDEN ELEMENT -->
+
+<div id="error-fallback-message">
+    La cucaracha no puede navegar por el sitio web correctamente porque JavaScript está deshabilitado en su navegador.
+    Por favor, habilite JavaScript para una mejor experiencia.
+    <br>
+    <a href="index.html">Go Home</a>
+</div>
+<!-- =========================
+     HEADER
+========================== -->
+<header class="container py-4">
+  <div class="header-glass p-3 p-md-4 rounded-4 text-center">
+
+    <h1 class="title mb-2" data-i18n="gallery_title">The Journey Through the Lens</h1>
+
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-3">
+      <nav class="d-flex flex-wrap justify-content-center gap-2 gap-md-3">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <span class="opacity-50">|</span>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <span class="opacity-50">|</span>
+        <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+        <span class="opacity-50">|</span>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="d-flex gap-2">
+        <button id="btnEN" class="btn btn-sm btn-outline-light">EN</button>
+        <button id="btnES" class="btn btn-sm btn-outline-light">ES</button>
+      </div>
+    </div>
+
+  </div>
+</header>
+    
+<!-- Step 1 — -->
+<main class="container pb-5">
+<section class="demo-step1">
+  <h3 class="subtitle" data-i18n="gallery_arrested">The Arrested Lens</h3>
+
+  <!-- === Lane 1: 3 thumbnails === -->
+
+  <div class="lane-3">
+  <!-- Relative positioning example -->
+  <figure class="artwork artwork--relative is-tall align-left hover-zoom">
+    <img src="guille-14.jpeg" alt="jacome playing live">
+    <figcaption>@Rockland 2025</figcaption>
+  </figure>
+   <!-- Relative positioning example -->
+  <figure class="artwork artwork--relative is-tall align-left hover-zoom">
+    <img src="guille-10.jpeg" alt="jacome playing live">
+    <figcaption>With The Jack 2024</figcaption>
+  </figure>
+  </div>
+
+  <!--Static positioning example-->
+  <div class="lane-3">
+  <figure class="artwork artwork--static is-tall align-right hover-zoom sticky-image">
+  <img src="guille-5.jpeg" alt="Sticky positioning demo">
+  <figcaption>Live 2025</figcaption>
+</figure>
+
+
+<figure class="artwork artwork--static is-tall align-right hover-zoom">
+  <img src="guille-11.jpeg" alt="Movie poster">
+  <figcaption>@Showcenter Complex 2025</figcaption>
+</figure>
+
+  <!--Static positioning example-->
+  <figure class="artwork artwork--static is-tall align-right hover-zoom">
+    <img src="guille1_logo.png" alt="jacome live performance">
+    <figcaption>@Studio Photo Session</figcaption>
+  </figure>
+
+<figure class="artwork artwork--static is-tall align-right hover-zoom">
+  <img src="guille-2.jpeg" alt="Movie poster">
+  <figcaption>"Pandillero del Infierno" poster 1999</figcaption>
+</figure>
+  </div>
+
+  <!--Absolute positioning example-->
+  <section class="absolute-gallery">
+  <figure class="artwork artwork--absolute is-tall align-center hover-zoom">
+    <img src="guille-6.jpg" alt="jacome studio session">
+    <figcaption>Studio Session 2013</figcaption>
+  </figure>
+<figure class="artwork artwork--absolute is-tall align-center hover-zoom">
+    <img src="guille-16.JPG" alt="Jacome & Billy Sheehan playing">
+    <figcaption>Jamming with Billy Sheehan 2023</figcaption>
+  </figure>
+  </section>
+
+  <!-- Z-INDEX STACK DEMO (clear overlap) (Images can be replaced later if needed) -->
+<section class="zstack-demo">
+  <h3 class="subtitle" data-i18n="gallery_zstack">Random Pictures</h3>
+
+  <div class="zstack-inline">
+    <figure class="zcard z1 hover-zoom">
+      <img src="guille-3.jpeg" alt="z-index 1">
+      <figcaption>Raxas Live 2021</figcaption>
+    </figure>
+
+    <figure class="zcard z2 hover-zoom">
+      <img src="guille-4.jpeg" alt="z-index 2">
+      <figcaption>Lvzbel 2003</figcaption>
+    </figure>
+
+    <figure class="zcard z3 hover-zoom">
+      <img src="guille-9.jpeg" alt="z-index 3">
+      <figcaption>The Jack live 2025</figcaption>
+    </figure>
+
+    <figure class="zcard z4 hover-zoom">
+      <img src="guille-8.jpeg" alt="z-index 4">
+      <figcaption>Ozzy's Tribute 2025</figcaption>
+    </figure>
+
+    <figure class="zcard z5 hover-zoom">
+      <img src="guille-12.jpeg" alt="z-index 5">
+      <figcaption>@Rockland 2025</figcaption>
+    </figure>
+
+    <figure class="zcard z6 hover-zoom">
+      <img src="guille-13.png" alt="z-index 6">
+      <figcaption>@Rockland Stage 2025</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Float & Clear TEXT WRAP DEMO (rubric example) -->
+<section class="float-text-demo">
+  <img src="guille-15.jpeg" alt="Float left demo image" class="float-img">
+
+  <p data-i18n="float_text_demo">
+    @ New York, City...
+  </p>
+
+  <div class="clear-demo"></div>
+</section>
+
+
+
+
+<!-- Float & Clear (Gallery) -->
+<section class="float-demo container">
+ 
+  <div class="float-row clearfix">
+    <figure class="float-card hover-zoom">
+      <img src="Lvzbel_2003.PNG" alt="Raxas Live">
+      <figcaption>Lvzbel 2003</figcaption>
+    </figure>
+
+    <figure class="float-card hover-zoom">
+      <img src="Lvzbel_Dream line-up 2.png" alt="Luzvel artwork">
+      <figcaption>Lvzbel Dream Line-up 2003</figcaption>
+    </figure>
+
+    <figure class="float-card hover-zoom">
+      <img src="Dallas_2004.PNG" alt="The Jack band">
+      <figcaption>Dallas 2004-Huizar/Jacome</figcaption>
+    </figure>
+
+    <figure class="float-card hover-zoom">
+      <img src="Portland Oregon 2004.PNG" alt="Guitarist big stage">
+      <figcaption>Portland Oregon 2004</figcaption>
+    </figure>
+
+    <figure class="float-card hover-zoom">
+      <img src="guille-gafas.PNG" alt="Jacome @Rockland 2025">
+      <figcaption>Rock Star Jacome</figcaption>
+    </figure>
+
+    <figure class="float-card hover-zoom">
+      <img src="guille-18.jpeg" alt="Jacome @Rockland 2025">
+      <figcaption>Jacome Live 2025</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- =========================
+     THE MOVING LENS (VIDEOS)
+========================== -->
+<section class="moving-lens-section my-4">
+
+  <div class="moving-lens-header mx-auto text-center">
+    <h3 class="subtitle mb-3" data-i18n="gallery_moving">
+      The Moving Lens
+    </h3>
+  </div>
+
+  <div class="glass-box p-3 p-md-4 rounded-4 mx-auto moving-lens-box">
+
+    <!-- Bootstrap Carousel -->
+    <div id="movingLensCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+
+      <!-- Indicators (dots) -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#movingLensCarousel" data-bs-slide-to="0"
+          class="active" aria-current="true" aria-label="Slide 1"></button>
+
+        <button type="button" data-bs-target="#movingLensCarousel" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+
+        <button type="button" data-bs-target="#movingLensCarousel" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>  
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+
+        <!-- Slide 1 (ONLY this one is active) -->
+        <div class="carousel-item active">
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/K5zE64u-mU4?si=kaXDrU-RAp78zefo"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="video-caption text-center mt-3 mb-0" data-i18n="moving_lens_caption_1">
+            Evangelium - El Hambre 2021 clip (YouTube)
+          </p>
+        </div>
+
+        <!-- Slide 2 (NO active here) -->
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/VKkyoL6d2LE?si=XGPuubvWjFFntAy5"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="video-caption text-center mt-3 mb-0" data-i18n="moving_lens_caption_2">
+            Evangelium - De un solo golpe 2021 clip (YouTube)
+          </p>
+        </div>
+
+        <!-- Slide 3 (NO active here) -->
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/5Nv35AdDGok?si=6FdAX1DqsAqT6MhE"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="video-caption text-center mt-3 mb-0" data-i18n="moving_lens_caption_3">
+            Evangelium - Evangelio Nocturno Promo 2022 (YouTube)
+          </p>
+        </div>
+
+        </div>
+
+      </div>
+
+      <!-- Controls (arrows) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#movingLensCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="prev">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#movingLensCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="next">Next</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FEATURED VIDEO (EXTERNAL)
+========================== -->
+<section class="featured-video-section my-5">
+
+  <div class="glass-box p-3 p-md-4 rounded-4 mx-auto featured-video-box">
+
+    <h4 class="featured-video-title mb-3">
+      The Jack/Xava Drago – Live 2023
+    </h4>
+
+    <div class="featured-video-content">
+
+      <!-- Thumbnail -->
+      <a
+        href="https://www.youtube.com/watch?v=8TUX-Zv6LFM"
+        target="_blank"
+        rel="noopener"
+        aria-label="Watch video on YouTube"
+        class="featured-video-thumb"
+      >
+        <img
+          src="https://img.youtube.com/vi/8TUX-Zv6LFM/hqdefault.jpg"
+          alt="Live performance – Separate Ways"
+        >
+        <span class="play-overlay">▶</span>
+      </a>
+
+      <!-- Text -->
+<p
+  class="featured-video-text mt-3 mb-3"
+  data-i18n="featured_video_text"
+>
+  <!-- Text injected by JS -->
+</p>
+
+
+      <!-- Button -->
+      <a
+        href="https://www.youtube.com/watch?v=8TUX-Zv6LFM"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-outline-light btn-sm"
+      >
+        Watch on YouTube
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+</main>
+  
+<!-- =========================
+     FOOTER
+========================== -->
+<footer class="mt-4 mb-4">
+  <div class="footer-glass text-center">
+    <p class="footer-text mb-0">
+      © <span id="currentYear"></span>
+      <span data-i18n="footer_rights_text">Guillermo Jacome — All Rights Reserved</span>
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  const translations = {
+    en: {
+      nav_home: "Home",
+      nav_about: "About me",
+      nav_gallery: "Gallery",
+      nav_contact: "Contact",
+      gallery_title: "The Journey Through the Lens",
+      gallery_arrested: "The Arrested Lens",
+      gallery_zstack: "Random Pictures",
+      gallery_moving: "The Moving Lens",
+      footer_rights_text: "Guillermo Jacome — All Rights Reserved",
+      float_text_demo: "@ New York, City with Ian ex-Rata Blanca (Argentina), Hernán Cotelo ex-A.N.I.M.A.L. (Argentina) and Leo Dobao from Lörihen (Argentina) during the U.S. Tour 2018. Captured by the talented photographer Alex Martinez, this moment encapsulates the energy and camaraderie of the tour. The image showcases the vibrant atmosphere of live performances and the strong bond between band members as they bring their music to life on stage.",
+
+      moving_lens_caption_1:"Evangelium \"El Hambre 2021\", Tribute to Arturo Huizar (YouTube)",
+      moving_lens_caption_2: "Evangelium \"De un solo golpe 2021\", Tribute to Arturo Huizar (YouTube)",
+      moving_lens_caption_3: "Evangelium \"Evangelio Nocturno Promo 2022\" (YouTube)",
+      
+      featured_video_text:
+      "The Jack/Xava Drago - Separate Ways (Journey cover), Live 2023. Click to watch directly on YouTube."
+    },
+    es: {
+      nav_home: "Inicio",
+      nav_about: "Acerca de mí",
+      nav_gallery: "Galería",
+      nav_contact: "Contacto",
+      gallery_title: "El Viaje a Través del Lente",
+      gallery_arrested: "El Lente Estatico",
+      gallery_zstack: "Rarezas Visuales",
+      gallery_moving: "El Lente en Movimiento",
+      footer_rights_text: "Guillermo Jacome — Todos los derechos reservados",
+      float_text_demo: "@ Ciudad de Nueva York, con Ian ex-Rata Blanca (Argentina), Hernán Cotelo ex-A.N.I.M.A.L. (Argentina) y Leo Dobao de Lörihen (Argentina) durante la gira por EE.UU. 2018. Capturado por el talentoso fotógrafo Alex Martinez, este momento encapsula la energía y la camaradería de la gira. La imagen muestra la vibrante atmósfera de las actuaciones en vivo y el fuerte vínculo entre los miembros de la banda mientras dan vida a su música en el escenario.",
+
+      moving_lens_caption_1:"Evangelium \"El Hambre 2021\", Homenaje a Arturo Huizar (YouTube)",
+      moving_lens_caption_2: "Evangelium \"De un solo golpe 2021\", Homenaje a Arturo Huizar (YouTube)",
+      moving_lens_caption_3: "Evangelium \"Evangelio Nocturno Promo 2022\" (YouTube)",
+      featured_video_text:
+      "The Jack/Xava Drago - Separate Ways (cover de Journey), en vivo 2023. Haga clic para ver directamente en YouTube."
+      
+    }
+  };
+
+  function applyLanguage(lang) {
+    const dict = translations[lang];
+    if (!dict) return;
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key]) el.textContent = dict[key];
+    });
+
+    localStorage.setItem("site_lang", lang);
+  }
+
+  const btnEN = document.getElementById("btnEN");
+  const btnES = document.getElementById("btnES");
+  if (btnEN) btnEN.addEventListener("click", () => applyLanguage("en"));
+  if (btnES) btnES.addEventListener("click", () => applyLanguage("es"));
+
+  applyLanguage(localStorage.getItem("site_lang") || "en");
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const yearSpan = document.getElementById("currentYear");
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  </body>
+</html>
+
+    
