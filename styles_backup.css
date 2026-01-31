@@ -370,9 +370,27 @@ body.contact main {
   color: #fff;
 }
 
+/* =========================
+   PERSONAL EMAIL
+========================== */
 /* Click feedback */
 .contact-btn:active {
   transform: scale(0.97);
+}
+
+.contact-email {
+  color: rgb(40, 83, 255);
+}
+
+.contact-email:hover {
+  color: #0aec0a; /* or your green accent */
+  text-decoration: none;
+}
+
+.email-icon {
+  width: 65px;
+  text-align: center;
+  opacity: 0.9;
 }
 
 /* =========================
