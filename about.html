@@ -225,13 +225,16 @@
     <!-- =========================
      FOOTER
 ========================== -->
-    <footer class="footer-glass mt-5 py-3 text-center">
-      <p class="footer-text mb-0">
-        © <span id="currentYear"></span>
-        <span data-i18n="footer_rights_text"
-          >Guillermo Jacome — All Rights Reserved</span
-        >
-      </p>
+    <footer class="site-footer mt-5 py-3">
+      <div class="footer-glass p-3 text-center">
+        <p class="footer-text mb-0">
+          © <span id="currentYear"></span>
+          <span data-i18n="footer_rights_text">
+            Guillermo Jacome — All Rights Reserved. Background images courtesy
+            of Unsplash, Pexels, and Pixabay.
+          </span>
+        </p>
+      </div>
     </footer>
 
     <!-- =========================
@@ -297,7 +300,8 @@
           about_discography_evangelium: "Discography — Evangelium",
           about_discography_evangelium_list: null, // fallback
 
-          footer_rights_text: "Guillermo Jacome — All Rights Reserved",
+          footer_rights_text:
+            "Guillermo Jacome — All Rights Reserved. Background images courtesy of Unsplash, Pexels, and Pixabay.",
         },
 
         es: {
@@ -373,7 +377,7 @@
         <li>2023 — Evangelio Nocturno (Remake de Evangelio Nocturno de Lvzbel)</li>
       `,
           footer_rights_text:
-            "Guillermo Jacome — Todos los derechos reservados",
+            "Guillermo Jacome — Todos los derechos reservados. Imágenes de fondo cortesía de Unsplash, Pexels y Pixabay.",
         },
       };
 
@@ -408,7 +412,7 @@
         });
 
         document.documentElement.lang = lang;
-        localStorage.setItem("lang", lang);
+        localStorage.setItem("site_lang", lang);
       }
 
       document
@@ -419,7 +423,7 @@
         ?.addEventListener("click", () => applyTranslations("es"));
 
       // Apply on load
-      const saved = localStorage.getItem("lang") || "en";
+      const saved = localStorage.getItem("site_lang") || "en";
       applyTranslations(saved);
     </script>
 

@@ -36,15 +36,34 @@ body {
    ========================================================= */
 
 body {
-  min-height: 100vh; /* modern mobile safe viewport height */
+  min-height: 100vh; /* more reliable than 100dvh everywhere */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative; /* needed for overlay stacking */
+
   color: #bab8b8;
 
-  /* common wallpaper behavior for every page */
-  background-color: #07110c; /* fallback if image missing */
+  background-color: #07110c;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  flex: 1 0 auto; /* content grows and pushes footer down */
+}
+
+footer {
+  margin-top: auto; /* key: forces footer to bottom */
 }
 
 /* Home wallpaper */
@@ -68,15 +87,22 @@ body.gallery {
 }
 
 /* Optional: soften the wallpaper slightly for readability */
-body.home::before,
-body.about::before,
-body.contact::before {
+body.home::after,
+body.about::after,
+body.contact::after {
   content: "";
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.25);
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
+}
+
+/* Mobile fix: iOS/Android don't handle fixed backgrounds reliably */
+@media (max-width: 992px), (orientation: portrait) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 /* ---- JS disabled message ---- */
@@ -282,13 +308,6 @@ body.about .glass-box ul li {
 /* ===============================
    CONTACT PAGE – FINAL INTENDED DESIGN
    =============================== */
-
-body.contact {
-  /* Main background */
-  background: url("Guille-concert2_Logo.png") center / cover fixed no-repeat;
-  overflow-x: hidden;
-  position: relative;
-}
 
 /* Central decorative image */
 body.contact::before {
@@ -579,16 +598,29 @@ body.contact main {
    FOOTER
 ========================== */
 .footer-glass {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(0, 255, 120, 0.25);
+
   max-width: 610px;
-  margin-inline: auto;
+  width: min(610px, 92vw); /* important for mobile */
+  margin: 0 auto;
   border-radius: 6px;
+}
+
+.site-footer {
+  margin-top: auto; /* pushes footer to bottom when page is short */
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .footer-text {
   font-size: 0.85rem;
   color: #04f520bc;
   letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .footer-glass {
+    background: rgba(0, 0, 0, 0.85);
+  }
 }
